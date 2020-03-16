@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  margin-top: 150px;
+  h1 {
+    padding: 5px;
+    background-color: #91a7ff;
+    font-family: "Ubuntu Mono";
+    font-size: 32px;
+    color: #ffffff;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin-left: 25px;
+      &.seperator {
+        background-color: #222222;
+        width: 5px;
+        height: 2px;
+      }
+      a {
+        text-decoration: none;
+        font-family: "Ubuntu Mono";
+        font-size: 18px;
+        color: #222222;
+        padding: 5px;
+        &:hover {
+          background-color: #91a7ff;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
