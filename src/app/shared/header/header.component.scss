@@ -25,6 +25,10 @@ header {
         font-family: "Ubuntu Mono";
         font-size: 18px;
         padding: 5px;
+        &.active {
+          background-color: #91a7ff;
+          color: #ffffff;
+        }
         &:hover {
           background-color: #91a7ff;
           color: #ffffff;

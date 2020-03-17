@@ -1,8 +1,10 @@
 <header>
-  <h1 class="notable">borabaloglu</h1>
+  <a routerLink="/">
+    <h1 class="notable">borabaloglu</h1>
+  </a>
   <nav>
     <ul>
-      <li><a routerLink="/" routerLinkActive="active">/home</a></li>
+      <li><a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">/home</a></li>
       <li class="seperator"></li>
       <li><a routerLink="/projects" routerLinkActive="active">/projects</a></li>
       <li class="seperator"></li>
