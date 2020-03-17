@@ -10,9 +10,13 @@ export class ProjectsComponent implements OnInit {
 
   repos: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.setRepos()
+  }
 
-  async ngOnInit() {
+  ngOnInit(): void { }
+
+  async setRepos(): Promise<any> {
     // @ts-ignore
     this.repos = (await this.http.get("https://api.github.com/users/borabaloglu/repos").toPromise()).map((repo) => {
       return {
