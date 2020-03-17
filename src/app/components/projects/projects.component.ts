@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  repos: any;
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) { }
+
+  async ngOnInit() {
+    // @ts-ignore
+    this.repos = (await this.http.get("https://api.github.com/users/borabaloglu/repos").toPromise()).map((repo) => {
+      return {
+        name: repo.name,
+        url: repo.html_url,
+        description: repo.description
+      }
+    });
   }
 
 }

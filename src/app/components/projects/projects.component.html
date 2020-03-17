@@ -1,1 +1,13 @@
-<p>projects works!</p>
+<div class="projects">
+  <h2>📚 Github</h2>
+  <ul class="repos">
+    <li *ngFor="let repo of repos">
+      <div class="project-card">
+        <a href="{{ repo.url }}" target="_blank">
+          <div class="project-name">📖 {{ repo.name }}</div>
+          <div class="project-description">{{ repo.description }}</div>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
