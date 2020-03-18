@@ -1,10 +1,10 @@
 <div class="projects">
-  <h2>📚 Github</h2>
-  <ul class="repos">
+  <h2><span aria-hidden="true">📚</span> Github</h2>
+  <ul class="repos" aria-label="github repositories">
     <li *ngFor="let repo of repos">
       <div class="project-card">
         <a href="{{ repo.url }}" target="_blank">
-          <div class="project-name">📖 {{ repo.name }}</div>
+          <div class="project-name"><span aria-hidden="true">📖</span> {{ repo.name }}</div>
           <div class="project-description">{{ repo.description }}</div>
         </a>
       </div>

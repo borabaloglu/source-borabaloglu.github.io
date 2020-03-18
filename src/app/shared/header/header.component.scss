@@ -5,30 +5,38 @@ header {
   width: 100%;
   margin-top: 150px;
   margin-bottom: 30px;
+
   h1 {
     font-family: "Ubuntu Mono";
     font-size: 32px;
     font-weight: 400;
   }
+
   nav ul {
     display: flex;
     align-items: center;
+
+    .seperator {
+      margin-left: 25px;
+      background-color: #222222;
+      width: 5px;
+      height: 2px;
+    }
+
     li {
       margin-left: 25px;
-      &.seperator {
-        background-color: #222222;
-        width: 5px;
-        height: 2px;
-      }
+
       a {
         text-decoration: none;
         font-family: "Ubuntu Mono";
         font-size: 18px;
         padding: 5px;
+
         &.active {
           background-color: #91a7ff;
           color: #ffffff;
         }
+
         &:hover {
           background-color: #91a7ff;
           color: #ffffff;
@@ -41,20 +49,25 @@ header {
 @media only screen and (max-width: 750px) {
   header {
     display: block !important;
+
     h1 {
       text-align: center;
     }
+
     nav ul {
       display: block !important;
       margin: 20px 0;
       border-top: 2px dashed #222222;
       border-bottom: 2px dashed #222222;
+
+      .seperator {
+        display: none !important;
+      }
+
       li {
-        &.seperator {
-          display: none !important;
-        }
         margin: 0;
         margin-top: 15px;
+
         &:last-child {
           margin-bottom: 15px;
         }
